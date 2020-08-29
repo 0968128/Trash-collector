@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+body, html {
+    font-family: 'VT323', monospace;
+    color: #000;
+    font-size: 50px;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+game {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* debugging
+game * {
+    border:5px solid blue;
+}
+*/
+
+background-component, ui-component, robot-component, spikes-component, gameover-component, paper-component, banana-component, paprika-component, can-component {
+    position: absolute;
+    display: block;
+}
+
+background-component {
+    background-image: url('../img/background.png');
+    background-position: top left;
+    background-size: 100vw 100vh;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-repeat: repeat;
+}
+
+battery {
+    transform: translate(20px, 20px);
+}
+
+score {
+    transform: translate(calc(100vw - 200px), 20px);
+}
+
+robot-component {
+    background-image: url('../img/robot.png');
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 125px;
+}
+
+spikes-component {
+    background-image: url('../img/spikes.png');
+    width: 110px;
+    height: 35px;
+}
+
+can-component {
+    background-image: url('../img/can.png');
+    width: 73px;
+    height: 58px;
+}
+
+paprika-component {
+    background-image: url('../img/paprika-mad.png');
+    width: 94px;
+    height: 109px;
+}
+
+paprika-component.smiling {
+    background-image: url('../img/paprika-smile.png');
+}
+
+/*paprika-component.angry {
+    background-image: url('../img/paprika-mad.png');
+}*/
+
+banana-component {
+    background-image: url('../img/banana.png');
+    width: 89px;
+    height: 36px;
+}
+
+gameover-component {
+    width: 400px;
+    background-color: white;
+    text-align: center;
+    font-size: 60px;
+    transform: translate(calc(50vw - 200px), calc(40vh - 50px));
+}
+
+ui-component {
+    width: 96vw;
+    transform: translate(2vw, 2vw);
+    display:flex;
+    line-height: 0.6;
+    justify-content: space-between;
+}
+
+
+ui-component>div:first-child {
+    width: 400px;
+    height: 30px;
+    border: 4px solid black;
+    background-color: rgba(255, 255, 255, 0.262)
+}
+
+ui-component>div:first-child>div {
+    width: 400px;
+    height: 30px;
+    background-color: rgb(28, 144, 245);
+}
+
+gameover-component {
+    width: 500px;
+    padding: 10px;
+    font-size:3em;
+    background-color: white;
+    transform: translate(calc(50vw - 250px), calc(50vh - 200px));
+}
